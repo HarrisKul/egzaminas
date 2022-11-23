@@ -27,7 +27,7 @@ const validate = (schema, req, res, next) => {
           message = 'Invalid title'
            break
         default:
-          message = 'Invalid data provided'
+          message = 'Empty field'
           break
         }
         return res.status(500).send(message)
