@@ -78,7 +78,7 @@ const EditPost = () => {
                         <label className="mb-1">Price</label>
                         <input type="text" name="price" className="form-control" onChange={handleForm} value={form.price} />
                     </div>
-                    <button className="btn btn-primary">Išsaugoti</button>
+                    <button className="btn btn-primary">Edit</button>
                 </form>
             </div>
         </>
