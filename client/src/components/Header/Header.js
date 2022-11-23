@@ -47,7 +47,7 @@ const Header = () => {
              
                 {userInfo.role === 1 &&
                   <li className='nav-item'>
-                 <Link to="/admin" className="nav-link" >Admin</Link>
+                 <Link to="/admin/posts" className="nav-link" >Admin</Link>
                 <ul>
                      <li>
                 <Link to="/admin/posts/new/" className="nav-link" >Add new book</Link>

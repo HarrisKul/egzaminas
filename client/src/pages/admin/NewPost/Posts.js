@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import MainContext from '../../../context/MainContext'
-// import './Posts.css'
+
 
 
 const Posts = () => {
@@ -72,7 +72,7 @@ const Posts = () => {
 
                     <p>{post.description}</p>
                     <div className="d-flex justify-content-end gap-2">
-                    <Link to={'/admin/posts/edit/' + post.id} className="btn btn-primary">Edit</Link>
+                    <button><Link to={'/admin/posts/edit/' + post.id} className="btn btn-warning">Edit</Link></button>
                     <button className="btn btn-warning" onClick={() => handleDelete(post.id)}>Delete</button>
                 </div>
 
