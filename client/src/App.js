@@ -5,6 +5,11 @@ import Header from './components/Header/Header';
 import Main from './pages/Main';
 import Posts from './pages/Posts';
 import NewPost from './pages/admin/NewPost/NewPost';
+import EditPost from './pages/admin/NewPost/EditPost';
+import PublicPosts from './pages/admin/NewPost/Posts'
+
+
+
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Alert from './components/Alert/Alert';
@@ -39,17 +44,11 @@ const App = () => {
             {userInfo.role === 1 &&
               <Route path="admin">
                 <Route path="posts/new" element={<NewPost />} />
+                <Route path="posts/" element={<Posts />} />
+                <Route path="posts/edit/:id" element={<EditPost />} />
               </Route>
             }
-            {/* Vieši keliai */}
-            {/* <Route path="/" element={<PublicSaloons />} />
-            <Route path="workers" element={<PublicWorkers />} />
-            {userInfo.id &&
-              <>
-                <Route path="new-order/:saloonId" element={<PublicNewOrder />} />
-                <Route path="orders" element={<PublicOrders />} />
-              </>
-            } */}
+
             <Route path="/" element={<Main />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
@@ -65,16 +64,3 @@ const App = () => {
 }
 
 export default App;
-
-
-
-{/* <BrowserRouter>
-<Header />
-<Routes>
-  <Route path="/" element={<Main />} />
-  <Route path="/posts" element={<Posts />} />
-  <Route path="/new-post" element={<NewPost />} />
-  <Route path="/register" element={<Register />} />
-  <Route path="/login" element={<Login />} />
-</Routes>
-</BrowserRouter> */}

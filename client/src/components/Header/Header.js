@@ -53,7 +53,7 @@ const Header = () => {
                 <Link to="/admin/posts/new/" className="nav-link" >Add new book</Link>
                      </li>
                      <li>
-                <Link to="/admin/posts" className="nav-link" >Edit books</Link>
+                <Link to="/admin/posts/" className="nav-link" >Edit books</Link>
                      </li>
                  <li>
                 <Link to="/admin/workers" className="nav-link"> Orders</Link>
