@@ -4,12 +4,14 @@ import './App.css';
 import Header from './components/Header/Header';
 import Main from './pages/Main';
 import Posts from './pages/Posts';
+
+//Admin Routes
 import NewPost from './pages/admin/NewPost/NewPost';
 import EditPost from './pages/admin/NewPost/EditPost';
 import PublicPosts from './pages/admin/NewPost/Posts'
 
 
-
+//Public routes
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Alert from './components/Alert/Alert';
@@ -44,7 +46,7 @@ const App = () => {
             {userInfo.role === 1 &&
               <Route path="admin">
                 <Route path="posts/new" element={<NewPost />} />
-                <Route path="posts/" element={<Posts />} />
+                <Route path="posts/" element={<PublicPosts />} />
                 <Route path="posts/edit/:id" element={<EditPost />} />
               </Route>
             }
